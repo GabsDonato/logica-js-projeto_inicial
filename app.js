@@ -1,10 +1,10 @@
 alert("Welcome to the secret game!");
-let numeroSecreto = 5;
+let numeroSecreto = 4;
 console.log("The secret number is: " + numeroSecreto);
 let chute = prompt("Choose a number between 1 and 10:");
 
 if (numeroSecreto == chute) {
-   alert("Congratulations! You've guessed the secret number!");
+   alert(`Congratulations! You've guessed the secret number! ${numeroSecreto}`);
 }
 
 else {
