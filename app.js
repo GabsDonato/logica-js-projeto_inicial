@@ -1,12 +1,33 @@
-alert("Welcome to the secret game!");
+alert("Bem-Vindo ao jogo do numero secreto!");
 let numeroSecreto = 4;
-console.log("The secret number is: " + numeroSecreto);
-let chute = prompt("Choose a number between 1 and 10:");
+console.log(numeroSecreto);
+let chute;
+let tentativas = 1;
 
-if (numeroSecreto == chute) {
-   alert(`Congratulations! You've guessed the secret number! ${numeroSecreto}`);
+
+while(chute != numeroSecreto) {
+   chute = prompt("Digite um numero entre 0 e 10:");
+  // Parar 
+   if (chute == numeroSecreto) {
+      break;
+   } else {
+      if (chute > numeroSecreto) {
+         alert(`O numero secreto e menor que ${chute}`);
+      } else {
+         alert(`O numero secreto e maior que ${chute}`);
+      }
+      // tentativas = tentativas + 1;
+      tentativas++;
+   } 
 }
 
-else {
-   alert("Wrong guess, try again!");
+if (tentativas > 1) {
+   alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} com ${tentativas} tentativas!`);
+} else {
+   alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} na sua primeira tentativa!`);
 }
+
+
+
+
+
