@@ -21,11 +21,15 @@ while(chute != numeroSecreto) {
    } 
 }
 
-if (tentativas > 1) {
-   alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} com ${tentativas} tentativas!`);
-} else {
-   alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} na sua primeira tentativa!`);
-}
+let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} com ${tentativas} ${palavraTentativa}!`);
+
+// Alternativa com if
+// if (tentativas > 1) {
+//    alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} com ${tentativas} tentativas!`);
+// } else {
+//    alert(`Parabens voce acertou o numero secreto: ${numeroSecreto} na sua primeira tentativa!`);
+// }
 
 
 
